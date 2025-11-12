@@ -32,7 +32,6 @@
         </nav>
 
         <div class="bx bx-moon" id="darkMode-icon"></div>
-
         <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
@@ -64,26 +63,26 @@
                 <div class="profession" style="--i:1;">
                     <i class='bx bx-code-alt'></i>
                     <h3>Web Developer</h3>
-                <div class="profession" style="--i:3;">
+                </div>
+                <div class="profession" style="--i:2;">
                     <i class='bx bx-game'></i>
                     <h3>Gamer</h3>
                 </div>
 
                 <div class="circle"></div>
             </div>
-
             <div class="overlay"></div>
         </div>
 
         <div class="home-img">
-            <img src="IMG20240126134047.jpg" alt="">
+            <img src="IMG20240126134047.jpg" alt="Shivam Mishra">
         </div>
     </section>
 
     <!-- about section design -->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="IMG20240126134047.jpg" alt="">
+            <img src="IMG20240126134047.jpg" alt="About Shivam">
         </div>
 
         <div class="about-content">
@@ -128,7 +127,7 @@
             </div>
 
             <div class="services-box">
-                <i class='bx bxs-paint'></i>
+                <i class='bx bxl-flutter'></i>
                 <h3>Flutter Development</h3>
                 <p>
                     I build cross-platform mobile applications using Flutter. My apps are optimized for performance and designed to deliver a consistent and visually engaging experience on both Android and iOS platforms.
@@ -144,7 +143,7 @@
 
         <div class="portfolio-container">
             <div class="portfolio-box">
-                <img src="portfolio2.png" alt="">
+                <img src="portfolio2.png" alt="Hotstar Clone">
                 <div class="portfolio-layer">
                     <h4>Hotstar Clone</h4>
                     <a href="#"><i class='bx bx-link-external'></i></a>
@@ -152,7 +151,7 @@
             </div>
 
             <div class="portfolio-box">
-                <img src="portfolio3.png" alt="">
+                <img src="portfolio3.png" alt="Tour & Travels">
                 <div class="portfolio-layer">
                     <h4>Tour & Travels Website</h4>
                     <a href="#"><i class='bx bx-link-external'></i></a>
@@ -160,7 +159,7 @@
             </div>
 
             <div class="portfolio-box">
-                <img src="data_dashboard.png" alt="">
+                <img src="data_dashboard.png" alt="Data Dashboard">
                 <div class="portfolio-layer">
                     <h4>Data Dashboard</h4>
                     <a href="#"><i class='bx bx-link-external'></i></a>
@@ -177,7 +176,7 @@
             <div class="testimonial-box mySwiper">
                 <div class="testimonial-content swiper-wrapper">
                     <div class="testimonial-slide swiper-slide">
-                        <img src="IMG-20230310-WA0000.jpg" alt="">
+                        <img src="IMG-20230310-WA0000.jpg" alt="Akhilesh Mishra">
                         <h3>AKHILESH MISHRA</h3>
                         <p>
                             “Shivam is a hardworking and analytical professional. His ability to derive insights from data and present them effectively sets him apart. He’s a true problem-solver with excellent technical and communication skills.”
@@ -228,7 +227,28 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <!-- custom js -->
-    <script src="sctipt.js"></script>
-</body>
-</html>
+    <script>
+        // Dark/Light mode toggle
+        const darkModeIcon = document.getElementById("darkMode-icon");
 
+        darkModeIcon.onclick = () => {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                darkModeIcon.classList.replace("bx-moon", "bx-sun");
+            } else {
+                darkModeIcon.classList.replace("bx-sun", "bx-moon");
+            }
+        };
+
+        // Responsive navbar
+        const menuIcon = document.getElementById("menu-icon");
+        const navbar = document.querySelector(".navbar");
+
+        menuIcon.onclick = () => {
+            navbar.classList.toggle("active");
+            menuIcon.classList.toggle("bx-x");
+        };
+    </script>
+</body>
+
+</html>
